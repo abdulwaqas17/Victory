@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+
+    *{
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    body{
+        background-image: url(bgc.jpg);
+        background: linear-gradient(to right,black,rgb(4, 190, 4));
+        background-size: cover;
+        font-family: "Abril Fatface", serif;
+        color: beige;
+        font-size: 1.3rem;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        
+        align-items: center;
+
+        height: 100vh;;
+              }
+
+    .text{
+        flex-basis: 30%;
+    } 
+    
+    .sub-heading{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .heading{
+        text-align: center;
+        
+    }
+    .images{
+        flex-basis: 50%;
+        display: grid;
+        grid-template-rows: repeat(4, 120px);
+        row-gap: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .box{
+        background-position: top;
+        background-size: cover;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 2.5s ease-in-out;
+        cursor: pointer;
+        background-color: rgb(59, 55, 55);
+        background-blend-mode: overlay;
+
+    }
+
+    .box:hover{
+        background:#999;
+        background-position: center;
+    }
+
+    /* Media Query */
+
+    @media screen and (max-width:1024px) {
+       .container{
+        flex-direction: column;
+        grid-auto-rows: 200px;
+        margin-top: 10px;
+        padding-block: 20px;
+       } 
+
+       .images{
+        width: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+       }
+
+
+       
+    }
+</style>
+<body>
+    <div class="container">
+    <div class="text">
+        <h2 class="heading">Pakistan Victories</h2>
+        <p class="sub-heading">One minute down,Next minute up.Pakistan Cricket and its best.</p>
+    </div>
+
+    <div class="images">
+        <div class="box" id="box-1" style="background-image: url(1992.jpg);"> <p>1992</p> <p>World Cup</p>        </div>
+        <div class="box" id="box-2" style="background-image: url(2009.jpg);"> <p>2007</p> <p>T20 World Cup</p>    </div>
+        <div class="box" id="box-3" style="background-image: url(2012.jpg);"> <p>2012</p> <p>Asia Cup</p>         </div>
+        <div class="box" id="box-4" style="background-image: url(2017.jpg);"> <p>2017</p> <p>Champions Trophy</p> </div>
+    </div>
+</div>
+</body>
+</html>
